@@ -1,0 +1,7 @@
+name: agentic_document_extraction_demo 
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - poetry=1.8.0

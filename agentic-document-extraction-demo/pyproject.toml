@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "agentic-document-extraction-demo"
+version = "0.1.0"
+description = ""
+authors = ["vithushanms <msvithushan@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+vision-agent = "^0.2.246"
+fitz = "^0.0.1.dev2"
+frontend = "^0.0.3"
+pdf2image = "^1.17.0"
+pymupdf = "^1.25.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
