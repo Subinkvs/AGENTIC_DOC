@@ -154,9 +154,13 @@ def query_data():
 
             # Ensure response is a dictionary
             if isinstance(response, dict):
-                query_results[doc_name] = response.get("answer", "No relevant answer found.")
+                answer = response.get("answer", "No relevant answer found.")
             else:
-                query_results[doc_name] = response  # If it's a string, return as is.
+                answer = response  # If it's a string, return as is.
+
+            # Exclude results with "I cannot find the answer in the provided document."
+            if answer != "I cannot find the answer in the provided document.":
+                query_results[doc_name] = answer
 
         except Exception as e:
             query_results[doc_name] = {"error": f"Failed to process query: {str(e)}"}
